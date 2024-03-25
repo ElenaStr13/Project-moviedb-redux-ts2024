@@ -6,7 +6,6 @@ import css from "./Movie.module.css";
 import {baseUrlImage} from "../../constants";
 import {StarsRating} from "../StarsRaring";
 
-
 interface IProps extends PropsWithChildren {
     movieByGenre: IMovie;
 }
