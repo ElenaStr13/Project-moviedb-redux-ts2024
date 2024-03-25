@@ -1,0 +1,49 @@
+.allMoviesList {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+.moviesList {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 75%;
+    margin: 0 auto;
+    gap: 20px;
+}
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 2vw;
+    margin: 40px auto;
+    background-color: var(--background-color);
+    color: rgba(23, 22, 22, 0.84);
+}
+
+.button {
+    padding: 5px 20px;
+    border-radius: 10px;
+    background-color: var(--background-color);
+    color: var(--color);
+}
+.moviesByGenreCard {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 18%;
+    border-radius: 5px;
+    padding: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+    color: var(--color);
+    margin-top: 10px;
+}
+.moviesByGenreCard > img {
+    width: 100%;
+    height: 190px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}

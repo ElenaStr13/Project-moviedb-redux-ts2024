@@ -1,0 +1,11 @@
+.genre {
+    padding: 5px 10px;
+    border: 1px solid rgba(23, 22, 22, 0.84);
+    border-radius: 20px;
+    background-color: rgba(23, 22, 22, 0.84);
+    color: snow;
+}
+.genre:hover {
+    cursor: pointer;
+    color: #f3adad;
+}

@@ -1,0 +1,30 @@
+.allMoviesList {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+.moviesList {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 75%;
+    margin: 0 auto;
+    gap: 20px;
+}
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 2vw;
+    margin: 40px auto;
+    background-color: var(--background-color);
+    color: rgba(23, 22, 22, 0.84);
+}
+
+.button {
+    padding: 5px 20px;
+    border-radius: 10px;
+    background-color: var(--background-color);
+    color: var(--color);
+}

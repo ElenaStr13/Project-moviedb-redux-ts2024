@@ -1,0 +1,9 @@
+.genres {
+    display: flex;
+    width: 80%;
+    flex-wrap: wrap;
+    margin: 3vh auto;
+    gap: 1vw;
+    justify-content: center;
+    flex-direction: row;
+}
