@@ -14,7 +14,7 @@ interface IProps extends PropsWithChildren {
 }
 
 const MovieInfo: FC<IProps> = ({movieDetails, onGenreClick}) => {
-    const {backdrop_path, genres, original_title, vote_count, original_language, release_date, overview, vote_average} = movieDetails;
+    const {poster_path, genres, original_title, vote_count, original_language, release_date, overview, vote_average} = movieDetails;
     const activeGenreId = useAppSelector(state => state.genres.activeGenreId);
 
     return (
@@ -24,8 +24,10 @@ const MovieInfo: FC<IProps> = ({movieDetails, onGenreClick}) => {
                 <sup><Badge className={css.badge}>{vote_count}</Badge></sup>
             </p>
             <div className={css.imgInfo}>
-                <img src={baseUrlImage + backdrop_path} alt={original_title}>
-                </img>
+                {(baseUrlImage + poster_path)?
+                    <img src={baseUrlImage + poster_path} alt={original_title}></img>
+                    :
+                    <img src='./logo.png' alt={original_title}></img>}
                 <div>
                     <div className={css.rating}>
                         <div>Rating</div>

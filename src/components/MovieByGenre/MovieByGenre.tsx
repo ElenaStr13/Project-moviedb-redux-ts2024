@@ -16,7 +16,10 @@ const MovieByGenre: FC<IProps> = ({movieByGenre}) => {
 
     return (
         <div className={css.moviesByGenreCard} onClick={() => navigate(`/3/movie/${id.toString()}`, {state: {movieByGenre}})}>
-            <img src={baseUrlImage + poster_path} alt={title}/>
+            {(baseUrlImage + poster_path)?
+                <img src={baseUrlImage + poster_path} alt={title}></img>
+                :
+                <img src='./logo.png' alt='null'></img>}
             <StarsRating voteAverage={vote_average} />
             <p>{title}</p>
         </div>

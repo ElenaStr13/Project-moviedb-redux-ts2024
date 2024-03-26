@@ -11,7 +11,7 @@ interface IProps extends PropsWithChildren {
 }
 const Movie: FC<IProps> = ({movie}) => {
     const {
-        backdrop_path,
+        poster_path,
         id,
         original_title,
         vote_average
@@ -20,7 +20,10 @@ const Movie: FC<IProps> = ({movie}) => {
 
     return (
         <div className={css.moviesCard} onClick={() => navigate(`/3/movie/${id.toString()}`, {state: {movie}})}>
-                <img src={baseUrlImage + backdrop_path}  alt={original_title}/>
+            {(baseUrlImage + poster_path)?
+                <img src={baseUrlImage + poster_path} alt={original_title}></img>
+                :
+                <img src='./logo.png' alt='null'></img>}
             <StarsRating voteAverage={vote_average} />
             <p>{original_title}</p>
         </div>
