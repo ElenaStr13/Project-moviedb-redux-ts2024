@@ -24,7 +24,7 @@ const MovieInfo: FC<IProps> = ({movieDetails, onGenreClick}) => {
                 <sup><Badge className={css.badge}>{vote_count}</Badge></sup>
             </p>
             <div className={css.imgInfo}>
-                {(baseUrlImage + poster_path)?
+                {poster_path?
                     <img src={baseUrlImage + poster_path} alt={original_title}></img>
                     :
                     <img src='./logo.png' alt={original_title}></img>}

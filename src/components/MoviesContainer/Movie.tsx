@@ -20,7 +20,7 @@ const Movie: FC<IProps> = ({movie}) => {
 
     return (
         <div className={css.moviesCard} onClick={() => navigate(`/3/movie/${id.toString()}`, {state: {movie}})}>
-            {(baseUrlImage + poster_path)?
+            {poster_path?
                 <img src={baseUrlImage + poster_path} alt={original_title}></img>
                 :
                 <img src='./logo.png' alt='null'></img>}
